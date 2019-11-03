@@ -15,6 +15,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [AppComponent, ToDoComponent],
@@ -27,7 +30,10 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
     FormsModule,
     BrowserAnimationsModule,
     MatInputModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatMenuModule,
+    MatButtonToggleModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -11,6 +11,7 @@ import { StoreModule } from '@ngrx/store';
 import { ToDoReducer } from './todo.reducer';
 import { TodoEffects } from './todo.effects';
 import { EffectsModule } from '@ngrx/effects';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [AppComponent, ToDoComponent],
@@ -20,7 +21,8 @@ import { EffectsModule } from '@ngrx/effects';
     HttpClientModule,
     StoreModule.forRoot({ todos: ToDoReducer }),
     EffectsModule.forRoot([TodoEffects]),
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

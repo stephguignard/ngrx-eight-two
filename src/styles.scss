@@ -1,7 +1,7 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@import '~@angular/material/theming';
-@import 'themes';
+@import "~@angular/material/theming";
+@import "themes";
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -12,27 +12,55 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$ngrx-eight-two-primary: mat-palette($mat-indigo);
-$ngrx-eight-two-accent: mat-palette($ngrx-eight-two-primary-blue, A200, A100, A400);
+$ngrx-eight-two-primary: mat-palette($mat-deep-purple);
+$ngrx-eight-two-accent: mat-palette(
+  $ngrx-eight-two-primary-blue,
+  A200,
+  A100,
+  A400
+);
 
 // The warn palette is optional (defaults to red).
 $ngrx-eight-two-warn: mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$ngrx-eight-two-theme: mat-light-theme($ngrx-eight-two-primary-blue, $ngrx-eight-two-accent, $ngrx-eight-two-warn);
+$ngrx-eight-two-theme: mat-light-theme(
+  $ngrx-eight-two-primary-blue,
+  $ngrx-eight-two-accent,
+  $ngrx-eight-two-warn
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($ngrx-eight-two-theme);
 
-/* You can add global styles to this file, and also import other style files */
+// Add own variables
+@import "variables";
 
+// Add bootstrap
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/grid";
+@import "~bootstrap/scss/utilities";
+
+// own reset
+@import "reset";
+
+/* You can add global styles to this file, and also import other style files */
+/*
 html,
 body {
   height: 100%;
 }
 body {
   margin: 0;
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+*/
+
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
 }

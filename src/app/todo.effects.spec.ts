@@ -12,10 +12,10 @@ describe('TodoEffects', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      providers: [TodoEffects, provideMockActions(() => actions$)]
+      providers: [TodoEffects, provideMockActions(() => actions$)],
     });
 
-    effects = TestBed.get<TodoEffects>(TodoEffects);
+    effects = TestBed.inject<TodoEffects>(TodoEffects);
   });
 
   it('should be created', () => {
